@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #1F1D2B;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*** SECTIONS ***/
+
+section {
+  padding: 2rem;
+}
+
+.welcome {
+  background-image: url("/images/welcome.jpg");
+  background-size: cover;
+}
+
+/* Articles */
+
+.articles {
+  background-color: #131626;
+  margin-bottom: 2rem;
+}
+
+.articles article {
+  margin-bottom: 2rem;
+  background-color: white;
+  position: relative;
+}
+
+.articles .black {
+  background-color: black;
+}
+
+.articles .gray {
+  background-color: gray;
+}
+
+article a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+article figure {
+  margin: 0 0 2rem 0;
+}
+
+article img {
+  width: 100%;
+}
+
+article span, article h2, article p, article .button {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+article span {
+  background-color: yellow;
+  padding: .5rem;
+  color: black;
+  font-size: .8rem;
+  margin-top: 2rem;
+  display: inline-block;
+}
+
+article h1, article h2 {
+  color: #131626;
+  font-size: 2rem;
+}
+
+article.black h2, article.gray h2, article p {
+  color: white;
+}
+
+article.white p, .blog article p {
+  color: #131626;
+}
+
+article .button {
+  display: inline-block;
+  pointer-events: none;
+  padding: .5rem .7rem;
+  border: 1px solid black;
+  transition: .3s;
+  margin-bottom: 2rem;
+  color: black;
+  background-color: white;
+}
+
+article:hover .button {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}
+
+/* FOOTER STYLE */
+
+footer {
+  background-color: #131626;
+  padding: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+  main, footer {
+      position: relative;
+      top: 10rem;
+  }
+  .home .articles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+  }
+  .blog .articles {
+      column-count: 3;
+  }
+  .articles article {
+      margin-bottom: 0;
+  }
+  .home .articles article:first-child {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+  }
+  .home .articles article:nth-child(2) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+  }
+  .blog .articles article {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      break-inside: avoid;
+      margin-bottom: 1rem;
+  }
+}

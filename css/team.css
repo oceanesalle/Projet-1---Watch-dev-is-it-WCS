@@ -1,0 +1,62 @@
+.team h1{
+  text-align: center;
+  border-bottom: 0.5rem solid white;
+  padding: 1rem;
+}
+
+.team h2{
+  text-align: center;
+}
+
+.div-redacteur img{
+  width: 100%;
+  border-radius: 100%;
+  border: 0.5px solid black;
+  box-shadow: 8px 8px 2px 1px rgba(255, 233, 35, 0.6);
+}
+
+.div-redacteur{
+  margin-top: 2rem;
+}
+
+.div-redacteur div {
+  text-align: center;
+  margin: 3rem 0 3rem 0;
+}
+
+/*FORMULAIRE DE CONTACT*/
+
+.contact-team{
+  border-top: 2rem solid #131626;
+  border-bottom: 2rem solid #131626;
+  border-radius: 10px;
+  margin-bottom: 10rem;
+  text-align: center;
+  background-color: white;
+  color:#131626;
+}
+
+/* #button-contact-team :hover {
+  background-color: yellow;
+
+} */
+
+/*MEDIA QUERIES DESKTOP*/
+
+
+@media screen and (min-width: 700px) {
+  .team h1{
+      padding:0 0 2rem 0;
+      font-size: 2.8rem;   
+  }
+  .div-redacteur{
+      display: flex;       
+  }
+  .div-redacteur div {
+      width: 25%;
+      margin: 5rem 0 5rem 0;
+  }
+
+  /*formulaire de contact*/
+
+}

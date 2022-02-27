@@ -1,0 +1,150 @@
+header{
+  background-color: #131626;
+  padding: 2rem;
+}
+
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menuNav{
+  display: none;
+}
+
+.menuNav ul, .navFooter, ul{
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+.menuNav ul li{
+  width: 70%;
+  margin: 0 auto .5rem auto;
+  text-align: center;
+  padding: .5rem;
+}
+
+.menuEquipe{
+  padding-left: 15px;
+  background-color: #131626;
+  color: black;
+  margin-right: 1rem;
+}
+.menuNav a{
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+  padding: .5rem 1rem;
+}
+
+.menuEquipe a{
+  border: solid 1px blanchedalmond;
+  border-radius: 45px;
+}
+
+.socialLink{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imgLogo{
+  fill: white;
+}
+
+.hamburger-opened .menuNav{
+  display: block;
+  flex-basis: 100%;
+}
+
+.hamburger {
+  cursor: pointer;
+  height: 15px;
+  margin: 0 20px 0 auto;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  width: 22px;
+}
+
+.hamburger-span {
+  background: #FFF;
+  border-radius: 9px;
+  cursor: pointer;
+  display: block;
+  height: 2px;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  width: 100%;
+  transition: .3s;
+}
+
+.hamburger-span:nth-child(2), .hamburger-span:nth-child(3) {
+  top: 8px;
+}
+
+.hamburger-span:nth-child(4) {
+  top: 16px;
+}
+
+.hamburger-opened .hamburger-span:first-child, .hamburger-opened .hamburger-span:last-child {
+  opacity: 0;
+}
+
+.hamburger-opened .hamburger-span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.hamburger-opened .hamburger-span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+footer a{
+  color: white;
+  text-decoration: none;
+}
+
+.menuNav a:hover, footer a:hover{
+  color: yellow;
+}
+
+@media screen and (min-width: 700px) {
+  header{
+      position: fixed;
+      width: 100%;
+      height: auto;
+      z-index: 10;
+      top: 0;
+  }
+  .header-container, section, .footer-container {
+      max-width: 1150px;
+      margin: 0 auto;
+  }
+  .header-container{
+      justify-content: space-between;
+      align-items: center;
+  }
+  .hamburger{
+      display: none;
+  }
+  .menuNav{
+      display: block;
+  }
+  .hamburger-opened .menuNav{
+      flex-basis: auto;
+  }
+  .menuNav ul, .navFooter{
+      display: flex;
+      justify-content: space-between;
+  }
+  .menuAccueil, .menuArticles{
+      margin-right: 2rem;
+      text-decoration: none;
+      font-weight: 200;
+  }
+}
